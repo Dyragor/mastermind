@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Player {
 
     private String[] guess;
+    private String name;
+    private String alter;
 
     public Player() {
 

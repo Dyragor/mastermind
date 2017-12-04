@@ -1,6 +1,5 @@
 public class Controller {
 
-
     private View view;
     private Game game;
 
