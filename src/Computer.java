@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Computer {
 
@@ -16,7 +17,8 @@ public class Computer {
     }
 
     private int randomNumber() {
-        return (int) (Math.random() * 10);
+        Random rn = new Random();
+        return rn.nextInt((9) + 1);
     }
 
     public ArrayList getNumberList() {

@@ -1,17 +1,17 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Player {
 
     private String[] guess;
-    private String name;
-    private String alter;
+    private ArrayList guessArrayList;
 
     public Player() {
 
     }
 
-    public String[] getGuess() {
-        return guess;
+    public ArrayList getGuess() {
+        return guessArrayList;
     }
 
     public void newGuess(){
@@ -20,6 +20,14 @@ public class Player {
         String input = scanner.nextLine();
 
         guess = input.split(",");
+        toArrayList();
 
+    }
+
+    private void toArrayList(){
+        guessArrayList = new ArrayList();
+        for (int i = 0; i < guess.length; i++) {
+            guessArrayList.add(Integer.parseInt(guess[i]));
+        }
     }
 }
